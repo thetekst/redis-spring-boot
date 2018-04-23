@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.0.1.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.5.RELEASE'
+    id 'groovy'
+}
+
+group 'ru.tkachenko.app'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-data-redis'
+    compile 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
+    compile 'redis.clients:jedis'
+
+    compileOnly 'org.projectlombok:lombok'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.4'
+}
