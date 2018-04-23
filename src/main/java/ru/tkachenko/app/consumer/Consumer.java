@@ -21,7 +21,7 @@ public class Consumer {
 
     @Scheduled(fixedDelay = 3000)
     public void recievedMessage() {
-        Event fromRedis = redisService.getAndRemoveValue("GZ");
+        Event fromRedis = redisService.getValue("GZ");
         log.info("====================Read Event from Redis: {}====================", fromRedis);
     }
 }

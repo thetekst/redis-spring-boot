@@ -31,6 +31,6 @@ public class Producer {
         final EventParam eventParam = new EventParam("test.rp@mail.ru", LocalDateTime.now(),
                 "8a905ae3d8c39dd5fbe26e16e6a05048", new BigDecimal("100.00"), CurrencyEnum.RUB, "sd");
         final Event event = new Event("GZ", "123456", "PAYMENT", eventParam);
-        redisService.setValue(event.getSystem(), event, 20, TimeUnit.SECONDS);
+        redisService.setValue(event.getSystem(), event, 4, TimeUnit.SECONDS);
     }
 }
